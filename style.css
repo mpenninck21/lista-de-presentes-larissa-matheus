@@ -1,0 +1,488 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+/* VARIÁVEIS GERAIS */
+:root {
+  --cor-primaria: #2e2e2e;
+  --cor-secundaria: #ffffff;
+  --cor-fonte: #333;
+  --cor-destaque: #fc3b00;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  background: var(--cor-secundaria);
+  color: var(--cor-fonte);
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 2em 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  font-size: 1em;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.5s ease, border-bottom 0.3s ease;
+}
+
+nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+nav .menu a {
+  margin-left: 1em;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 0.4em 1em;
+}
+
+.menu a:hover {
+  background-color: rgb(245, 245, 245);
+  transition: 0.5s;
+  border-radius: 0.5em;
+}
+
+nav.scrolled {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav.scrolled .logo,
+nav.scrolled .menu a {
+  color: #2e2e2e;
+  text-shadow: none;
+}
+
+/* HEADER */
+header {
+  height: 100vh;
+  background: url('banner.png') center/cover no-repeat;
+}
+
+/* MAIN (página index.html) */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0em 1em 2em;
+  height: auto;
+}
+
+/* CONTADOR */
+.contador {
+  text-align: center;
+  margin: 3em auto;
+  max-width: 800px;
+}
+
+.contador-titulo {
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2e2e2e;
+  margin-bottom: 5em;
+  font-weight: 700;
+}
+
+.contador-blocos {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-bottom: 7em;
+}
+
+.bloco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f3e4df;
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  font-family: 'Forum', serif;
+  width: 5.5em;
+}
+
+.numero {
+  font-size: 2.5em;
+  color: #2e2e2e;
+}
+
+.legenda {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  text-transform: capitalize;
+  color: #555;
+}
+
+/* DESCRIÇÃO */
+.descricao {
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.8;
+  margin: auto;
+}
+
+.titulo-descricao {
+  margin-bottom: 3em;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.subtitulo-descricao {
+  font-weight: 700;
+  margin-bottom: 1em;
+  text-align: left;
+  color: rgb(109, 109, 109);
+}
+
+.textodescricao {
+  font-weight: 500;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+/* LINHA FOOTER */
+.linha-footer {
+  border-top: 1px solid #ccc;
+  margin: 6em 0 2em;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.linha-footer-presentes {
+  border-top: 1px solid #ccc;
+  margin: 6em 0 2em;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  font-size: 1.1em;
+  color: #000000;
+  font-family: 'Mulish', sans-serif;
+  padding: 2em 0 4em 0;
+  font-weight: 700;
+}
+
+.footer-presentes {
+  text-align: center;
+  font-size: 1.1em;
+  color: #000000;
+  font-family: 'Mulish', sans-serif;
+  padding: 2em 0 0 0;
+  font-weight: 700;
+}
+
+/* PRESENTES.HTML */
+/* Seção de Presentes */
+.presentes-container {
+  max-width: 1400px;
+  margin: 8em auto 4em;
+  text-align: center;
+}
+
+.presentes-intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #2e2e2e;
+}
+
+.presentes-intro p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1em;
+  margin-bottom: 3em;
+  color: #444;
+}
+
+.grade-presentes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 2em;
+  justify-items: center;
+}
+
+.presente-card {
+  background-color: #ffe7e7;
+  border-radius: 8px;
+  padding: 1.5em 1em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  transition: transform 0.3s ease;
+  max-width: 600px;
+}
+
+.presente-card:hover {
+  transform: translateY(-5px);
+}
+
+.presente-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+
+#rivotril, #capacete, #forro, #dicionario, #salgrosso, #flamengo {
+    width: 318px;
+}
+
+.presente-card p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 0.95em;
+  color: #333;
+  margin-bottom: 0.5em;
+  text-align: center;
+  min-height: 48px; /* garante alinhamento */
+}
+
+.presente-card span {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 1em;
+}
+
+.presente-card button {
+  background-color: #fc3b00;
+  color: white;
+  border: none;
+  padding: 0.6em 1.5em;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.presente-card button:hover {
+  background-color: #e63300;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 900px;
+  text-align: center;
+  position: relative;
+}
+
+.qr-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+
+.qr-item img {
+  width: 320px;
+  height: 280px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.close {
+  color: #888;
+  font-size: 2.5em;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #fc3b00;
+}
+
+
+
+
+/* Adicione ao final do style.css */
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  nav .logo {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  nav .menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  nav .menu a {
+    margin: 0;
+    font-size: 0.95em;
+  }
+
+  header {
+    height: 50vh;
+    background-position: center;
+  }
+
+  .contador-blocos {
+    gap: 1em;
+  }
+
+  .bloco {
+    width: 4.2em;
+    padding: 0.6em 0.9em;
+  }
+
+  .numero {
+    font-size: 1.8em;
+  }
+
+  .descricao {
+    font-size: 1em;
+    padding: 0 1em;
+  }
+
+  .textodescricao {
+    font-size: 0.85em;
+  }
+
+  .grade-presentes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 0 1em;
+  }
+
+  .presente-card {
+    padding: 1em;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .presente-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .presente-card p {
+    font-size: 0.8em;
+  }
+
+  .presente-card span {
+    font-size: 0.9em;
+  }
+
+  .presente-card button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+    padding: 1em;
+    height: auto;
+  }
+
+  .qr-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .qr-item img {
+    width: 80vw;
+    height: auto;
+  }
+
+  .modal-content h2 {
+    font-size: 1.3em;
+  }
+
+  .close {
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .logo {
+    font-size: 1.8em;
+    text-align: center;
+    width: 100%;
+  }
+
+  .presentes-intro h1 {
+    font-size: 1.3em;
+  }
+
+  .presentes-intro p {
+    font-size: 0.95em;
+  }
+
+  .modal-content h2 {
+    font-size: 1.2em;
+  }
+
+  .close {
+    font-size: 1.8em;
+  }
+}
