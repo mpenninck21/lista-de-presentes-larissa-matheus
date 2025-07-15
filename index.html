@@ -1,3 +1,113 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chá de Casa Nova - Larissa & Matheus</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Great+Vibes&family=Forum&family=Aesthetic&family=Playfair+Display&family=Mulish:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="spinner">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="spinner-heart" alt="Carregando...">
+    </div>
+
+    <nav>
+        <div class="logo">L / M</div>
+        <div class="menu">
+            <a class="inicio-navbar" href="#inicio">início</a>
+            <a class="presentes-navbar" href="presentes.html">presentes</a>
+        </div>
+    </nav>
+
+    <header id="inicio"></header>
+
+    <main>
+        <div class="contador">
+            <p class="contador-titulo">CONTAGEM REGRESSIVA PARA O GRANDE DIA</p>
+            <div class="contador-blocos">
+                <div class="bloco">
+                    <div class="numero" id="dias">00</div>
+                    <div class="legenda">Dias</div>
+                </div>
+                <div class="bloco">
+                    <div class="numero" id="horas">00</div>
+                    <div class="legenda">Horas</div>
+                </div>
+                <div class="bloco">
+                    <div class="numero" id="minutos">00</div>
+                    <div class="legenda">Minutos</div>
+                </div>
+                <div class="bloco">
+                    <div class="numero" id="segundos">00</div>
+                    <div class="legenda">Segundos</div>
+                </div>
+            </div>
+        </div>
+
+        <section id="descricao" class="descricao">
+            <h1 class="titulo-descricao">SEJAM BEM VINDOS AO NOSSO SITE</h1>
+            <h4 class="subtitulo-descricao">Bem-vindos ao nosso Chá de Casa Nova! 🏡✨</h4>
+            <p class="textodescricao">Bem-vindos ao nosso Chá de Casa Nova! 🏡💛
+
+                Oi, gente! Aqui é a Larissa e o Matheus (ou Heri, como a maioria conhece 😄).
+                <br>
+                <br>
+                Depois de muita correria, escolhas (nem sempre fáceis) e aquela mistura de ansiedade com alegria,
+                estamos vivendo uma fase muito especial: o começo da nossa vida no nosso lar. Aos poucos, tudo vai
+                tomando forma, ficando com a nossa cara, e a gente só consegue pensar em como é bom ter por perto quem
+                realmente faz parte da nossa caminhada.
+                <br><br>
+                No dia 03/08, vamos fazer nosso Chá de Casa Nova — e, claro, vai ser no apê novo! Vai ser simples, mas
+                de coração, do jeitinho que a gente gosta: com gente que importa, risada, conversa boa e muito afeto.
+                <br><br>
+                Pra facilitar, criamos esse site com alguns presentinhos simbólicos. Quem quiser e puder participar
+                dessa construção com a gente, vai estar ajudando não só a montar um lar, mas a deixar ele cheio de
+                significado.
+                <br><br>
+                Obrigada por fazerem parte da nossa história. Ter vocês perto nesse momento faz tudo ter ainda mais
+                sentido.
+                <br><br>
+                Com carinho,
+                Larissa & Heri
+            </p>
+        </section>
+
+        <div class="linha-footer"></div>
+
+        <footer class="footer">
+            <p>Feito com amor por Larissa & Matheus 💛</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.querySelectorAll("a").forEach(link => {
+            const href = link.getAttribute("href");
+            if (href && !href.startsWith("#") && !href.startsWith("javascript")) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const spinner = document.getElementById("spinner");
+                    spinner.classList.add("active");
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 1000); // tempo do spinner
+                });
+            }
+        });
+    </script>
+
+
+</body>
+
+=======
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -80,4 +190,5 @@
     <script src="script.js"></script>
 </body>
 
+>>>>>>> 942998d0687f65d82146b2bac590283c2d9a9889
 </html>
